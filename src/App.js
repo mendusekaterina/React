@@ -1,9 +1,13 @@
+
+// import {Simpsons} from "./components/Simpsons/Simpsons";
+import {Characters} from "./components/Characters/Characters";
+
 const App = () => {
- return (
+    return (
   <div>
-   App
+{/*<Simpsons/>*/}
+      <Characters/>
   </div>
  );
 };
-
 export {App};
