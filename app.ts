@@ -1,4 +1,4 @@
-import {IUser} from "./type/typeUser";
+import {IUser} from "./interfaces/UserInterface";
 
 const user:IUser =  {
     name:"Max",
@@ -9,11 +9,11 @@ const user:IUser =  {
 function sum(a:number,b:number):number{
     return a+b
 }
-function showSum(a,b){
+function showSum(a:number,b:number):void{
     console.log(a + b);
 }
 
-function incAge(someUser:IUser, inc:number):object{
+function incAge(someUser:IUser, inc:number):IUser{
     someUser.age+=inc
     return someUser
 }
