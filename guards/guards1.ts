@@ -8,3 +8,21 @@ function strip(x:string|number) {
 console.log(strip(3.145678));
 console.log(strip('     rtyufggjjhiiu  '));
 
+class MyResponse{
+    header='responce header'
+    result='response result'
+}
+class MyError{
+    header='error header'
+    message='error message'
+}
+
+function handle (res:MyResponse|MyError) {
+    if (res instanceof MyResponse){
+        return {
+            info:res.header+res.result
+        }
+        else{
+            return {info: res.header+res.header}
+        }
+}
